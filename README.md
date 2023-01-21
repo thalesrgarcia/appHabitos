@@ -34,6 +34,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O appHabitos é um app para rastrear os aptos diarios e marcar de forma online o seu dia-a-dia.
 
+- [visite o projeto online](https://thalesrgarcia.github.io/appHabitos/)
+
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
