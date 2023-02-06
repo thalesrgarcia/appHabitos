@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./cadastrar.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>cadastro_appHabitos</title>
+  </head>
+
+  <body>
+    <div id="cadastro">
+      <form class="card-cadastro">
+        <div class="card-header-cadastro">
+          <h2>Registrar</h2>
+          <img
+            class="imagemLogo"
+            src="../../../assets/logo.svg"
+            alt="Logomarca do aplicativo Habitos"
+          />
+        </div>
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
+        <div class="card-content">
+          <div class="card-content-area">
+            <label id="labelUsuarioCadastro"> Informe nome de usuario</label>
+            <input type="text" id="usuarioCadastro" placeholder=" " required />
+          </div>
+          <div class="card-content-area">
+            <label id="labelEmail"> Informe e-mail do usuario</label>
+            <input
+              type="text"
+              id="email"
+              required
+              placeholder="  seuemail@dominio.com"
+            />
+          </div>
+          <div class="card-content-area">
+            <label id="labelPrimeiraSenha" for="password"
+              >Informe uma senha</label
+            >
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <input id="primeiraSenha" type="password" required placeholder="" />
+          </div>
+          <div class="card-content-area">
+            <label id="labelSegundaSenha" for="password"
+              >Confirme sua senha</label
+            >
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <input id="segundaSenha" type="password" required placeholder="" />
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <input
+            onclick="cadastrar()"
+            type="button"
+            value="Confirmar"
+            class="submit"
+          /><br />
+        </div>
+        <div>
+          <a href="../login/login.html" class="voltar">voltar</a>
+        </div>
+      </form>
+    </div>
+    <script src="../register/js-cadastrar/cadastrar.js"></script>
+    <script>
+      const btn = document.querySelector(".fa-eye")
+      btn.addEventListener("click", verPrimeiraSenha)
+    </script>
+
+    <script>
+      const btnSegundo = document.querySelector(".fa-eye")
+      btnSegundo.addEventListener("click", verSegundaSenha)
+    </script>
+  </body>
+</html>

@@ -19,7 +19,7 @@ function add() {
   const today = new Date().toLocaleDateString("pt-br").slice(0, -5)
   //biblioteca dayExistis é false se a data nao repetir
   //com isso, a variavel dayExists recebe a biblioteca.função com parametro da data
-  //const today = "03/01"
+  //const today = "27/01"
   //para simular outras datas voce pode comentar a linha de codigo acima e colocar assim quantas vezes quiser trocando a data para acrescentar manualmente outros dias!
 
   //para limpar, f12, aplication, localstorage e deleta.
@@ -57,3 +57,11 @@ nlwSetup.setData(data)
 
 //para compilar na pagina
 nlwSetup.load()
+
+function sair() {
+  localStorage.removeItem("token")
+  setTimeout(() => {
+    window.location.href =
+      "file:///C:/Users/thales.r.garcia/Desktop/projeto_habito/src/modules/login/login.html"
+  }, 500)
+}

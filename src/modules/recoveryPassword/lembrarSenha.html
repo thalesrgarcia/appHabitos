@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../recoveryPassword/recoveryPassword.css" />
+    <script src="../recoveryPassword/js-recoveryPassword/recoveryKey.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>login_appHabitos</title>
+  </head>
+  <body>
+    <div id="login">
+      <form class="card">
+        <div class="card-header">
+          <h2>Recuperar</h2>
+          <img
+            class="imagemLogo"
+            src="../../../assets/logo.svg"
+            alt="Logomarca do aplicativo Habitos"
+          />
+        </div>
+        <div class="card-content-recuperar">
+          <div class="card-content-area">
+            <label for="email"> informe o e-mail cadastrado</label>
+            <input type="text" id="emailRecover" required placeholder="" />
+          </div>
+        </div>
+        <div class="card-footer">
+          <input
+            onclick="entrar()"
+            type="button"
+            value="Confirmar"
+            class="submit"
+          /><br />
+          <a href="../login/login.html">voltar</a>
+        </div>
+      </form>
+    </div>
+    <script>
+      document
+        .querySelector("input.submit")
+        .addEventListener("click", recuperarSenha)
+    </script>
+  </body>
+</html>

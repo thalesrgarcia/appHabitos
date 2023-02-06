@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./login.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>login_appHabitos</title>
+  </head>
+  <body>
+    <div id="login">
+      <form class="card">
+        <div class="card-header">
+          <h2>Login</h2>
+          <img
+            class="imagemLogo"
+            src="../../../assets/logo.svg"
+            alt="Logomarca do aplicativo Habitos"
+          />
+        </div>
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
+        <div class="card-content">
+          <div class="card-content-area">
+            <label id="labelUsuarioCadastro" for="usuario">Usuário</label>
+            <input type="text" id="usuario" required placeholder="" />
+          </div>
+
+          <div class="card-content-area">
+            <label id="labelSenha" for="password">Senha</label>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <input type="password" id="password" required placeholder="" />
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <input
+            onclick="entrar()"
+            type="button"
+            value="login"
+            class="submit"
+          /><br />
+          <a
+            href="../recoveryPassword/lembrarSenha.html"
+            class="recuperar_senha"
+            >Esqueceu a senha?</a
+          ><br />
+          <a href="../register/cadastrar.html" class="novo-cadastro"
+            >criar nova senha</a
+          >
+        </div>
+      </form>
+    </div>
+    <script>
+      const btn = document.querySelector(".fa-eye")
+      btn.addEventListener("click", verSenha)
+    </script>
+    <script src="../login/js-login/script-login.js"></script>
+    <script>
+      document
+        .querySelector("input.submit")
+        .addEventListener("click", confirmarSenha)
+    </script>
+  </body>
+</html>
